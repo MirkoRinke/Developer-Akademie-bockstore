@@ -1,0 +1,237 @@
+/* Colors */
+
+$mainColor: rgb(8, 60, 67); // Matte Version von Dunkel-Türkis
+$secondColor: rgb(19, 133, 145); // Matte Version von Hellem Türkis
+$fontColor: rgb(153, 196, 215); // Matte Version von Hellem Blau
+
+/* Variables */
+
+/* @media breakpoints */
+
+/** 1650pxoder schmaler */
+$breakpoint-lg: 1650px !default;
+
+/** 1100px oder schmaler */
+$breakpoint-md: 1100px !default;
+
+/** 800px oder schmaler */
+$breakpoint-sm: 800px !default;
+
+/** 1650pxoder schmaler */
+// @media (max-width: $breakpoint-lg) {
+// }
+/** 1100px oder schmaler */
+// @media (max-width: $breakpoint-md) {
+// }
+/** 800px oder schmaler */
+// @media (max-width: $breakpoint-sm) {
+// }
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Raleway", sans-serif;
+  scrollbar-color: $mainColor $secondColor;
+  scrollbar-width: thin;
+}
+
+.main_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(../assets/img/bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  padding-top: 40px;
+
+  &--container_books {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    color: $fontColor;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+    @media (max-width: $breakpoint-lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $breakpoint-md) {
+      grid-template-columns: repeat(2, 1fr);
+      margin-inline: 25px;
+      gap: 20px;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      grid-template-columns: repeat(1, 1fr);
+      padding-inline: 0;
+      margin-inline: 5px;
+      gap: 20px;
+    }
+
+    &--book_card {
+      position: relative;
+      width: 500px;
+      min-height: auto;
+      background: $mainColor;
+      background: linear-gradient(135deg, $mainColor 0%, $secondColor 20%, $mainColor 40%, $secondColor 60%, $mainColor 80%);
+      border: 0px solid transparent;
+      border-radius: 5px;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      padding: 20px;
+      padding-left: 50px;
+      padding-right: 30px;
+      box-shadow: 16px 16px 10px -6px rgba(0, 0, 0, 1);
+
+      @media (max-width: $breakpoint-md) {
+        max-width: 500px;
+        width: 100%;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 100%;
+        background: linear-gradient(90deg, $secondColor 0%, $mainColor 100%);
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+
+      &--info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &--heading {
+          font-size: 24px;
+          padding: 10px;
+
+          @media (max-width: $breakpoint-md) {
+            font-size: 18px;
+          }
+
+          @media (max-width: $breakpoint-sm) {
+            font-size: 16px;
+          }
+        }
+
+        &--img {
+          width: 200px;
+          height: 200px;
+          margin: 10px 10px 30px 10px;
+          border: 2px solid transparent;
+          border-radius: 10px;
+          object-fit: cover;
+        }
+      }
+
+      &--data {
+        &--details {
+          margin-bottom: 20px;
+          width: 100%;
+          padding: 5px 0px;
+
+          & tr {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0px;
+          }
+        }
+
+        &--price_like {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 20px;
+
+          &--price {
+            font-weight: bold;
+          }
+
+          &--like {
+            display: flex;
+            align-items: center;
+            user-select: none;
+
+            :hover {
+              cursor: pointer;
+            }
+
+            &--like_button {
+              margin-left: 10px;
+              height: 35px;
+              width: 35px;
+              fill: rgb(0, 0, 0);
+            }
+          }
+        }
+      }
+
+      &--comments {
+        display: flex;
+        flex-direction: column;
+
+        &--heading {
+          font-size: 16px;
+          text-align: left;
+        }
+
+        &--content {
+          height: 200px;
+          overflow: scroll;
+          overflow-x: hidden;
+          scrollbar-width: none;
+
+          &--comment {
+            margin-top: 10px;
+            margin-bottom: 10px;
+
+            &--name {
+              font-weight: bold;
+            }
+          }
+        }
+
+        &--input_container {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+
+          &--input {
+            height: 30px;
+            margin-left: 30px;
+            margin-bottom: 5px;
+            width: 75%;
+            background-color: transparent;
+            outline: none;
+            border: 2px solid $fontColor;
+            color: $fontColor;
+            &:-webkit-autofill {
+              -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+              transition: background-color 5000s ease-in-out 0s;
+            }
+          }
+
+          &--send_button {
+            height: 35px;
+            width: 35px;
+            margin-bottom: 10px;
+            fill: $fontColor;
+            transform: rotate(90deg);
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
