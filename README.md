@@ -14,13 +14,9 @@ Welcome to my seventh project as part of the Developer Academy! In this project,
 
 ## 🛠️ Built with
 
-
 - HTML
 - CSS / SCSS
-- Flexbox
-- Grid
-
-
+- JS
 
 ## ⚙️ How to Use
 
