@@ -1,10 +1,10 @@
 /* Colors */
 /* Variables */
 /* @media breakpoints */
-/** 1650pxoder schmaler */
+/** 1650px oder schmaler */
 /** 1100px oder schmaler */
 /** 800px oder schmaler */
-/** 1650pxoder schmaler */
+/** 1650px oder schmaler */
 /** 1100px oder schmaler */
 /** 800px oder schmaler */
 * {
@@ -113,7 +113,7 @@
   border: 2px solid transparent;
   border-radius: 10px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .main_container--container_books--book_card--data--details {
   margin-bottom: 20px;
@@ -138,8 +138,8 @@
   display: flex;
   align-items: center;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 .main_container--container_books--book_card--data--price_like--like :hover {
   cursor: pointer;
@@ -200,4 +200,4 @@
 }
 .main_container--container_books--book_card--comments--input_container--send_button:hover {
   cursor: pointer;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
