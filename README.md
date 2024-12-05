@@ -7,10 +7,6 @@
 
 Welcome to my seventh project as part of the Developer Academy! In this project, I created a bookstore website where you can browse our book collection, leave likes, and share your opinions in the comments. Discover your next favorite book!
 
-## 🔗 Links
-
-- [Live Site URL](https://warm-truffle-b328e7.netlify.app/)
-
 
 ## 🛠️ Built with
 
@@ -32,4 +28,5 @@ Welcome to my seventh project as part of the Developer Academy! In this project,
 
 ## ✍️ Author
 
-- Website - [My Github](https://github.com/MirkoRinke)
+ - [Webiste](https://mirkorinke.dev)
+ - [Github](https://github.com/MirkoRinke)
